@@ -4253,7 +4253,7 @@
     const viewMore = document.querySelector(".blog__view-more");
     if (items) loadingItems();
     async function loadingItems() {
-        const responce = await fetch("../files/data.json", {
+        const responce = await fetch("files/data.json", {
             method: "GET"
         });
         if (responce.ok) {
