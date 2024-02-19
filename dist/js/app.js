@@ -4253,11 +4253,13 @@
     const viewMore = document.querySelector(".blog__view-more");
     if (items) loadingItems();
     async function loadingItems() {
-        const responce = await fetch("files/data.json", {
+        const responce = await fetch("https://upcdn.io/W142iUd/raw/data.json", {
             method: "GET"
         });
         if (responce.ok) {
+            console.log(responce);
             const responceResult = await responce.json();
+            console.log(responceResult);
             initBlog(responceResult);
         } else console.log("error");
     }
